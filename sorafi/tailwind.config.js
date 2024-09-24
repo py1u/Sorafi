@@ -8,9 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        sorafi: {
+          dark: "#16161D",
+        },
       },
+    },
+    fontFamily: {
+      oxanium: ["var(--font-oxanium)", "sans-serif"],
     },
   },
   plugins: [],
