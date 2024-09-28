@@ -9,7 +9,7 @@ on:
 
 jobs:
   prepare-nodejs:
-    name: NodeJS
+    name: Set up NodeJS
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +19,11 @@ jobs:
         with:
           node-version: "20.x"
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
   format:
     name: Prettier
     runs-on: ubuntu-latest
-    needs: prepare-nodejs
 
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +35,6 @@ jobs:
   lint:
     name: ESLint
     runs-on: ubuntu-latest
-    needs: prepare-nodejs
 
     steps:
       - uses: actions/checkout@v4
@@ -44,9 +42,8 @@ jobs:
         run: npm run lint
 
   build:
-    name: Next Build
+    name: Next.js Build
     runs-on: ubuntu-latest
-    needs: prepare-nodejs
 
     steps:
       - uses: actions/checkout@v4
