@@ -1,0 +1,24 @@
+name: Sorafi CI
+run-name: ${{ github.actor }} is running git actions
+
+on:
+  pull_request:
+    branches: [dev]
+  push:
+    branches: [dev]
+
+jobs:
+  prettier-format:
+    name: run format
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install dependencies
+        run: npm ci
+      
+
+    
