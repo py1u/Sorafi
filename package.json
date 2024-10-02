@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "flask-dev": "python -m flask --app api/server run --debug -p 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,6 +18,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.1.0",
