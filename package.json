@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "npx prettier . --write",
-    "check": "npx prettier . --check"
+    "check": "npx prettier . --check",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "14.2.11",
@@ -22,6 +23,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
