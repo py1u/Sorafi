@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Oxanium } from "next/font/google";
+import { Toaster } from "sonner";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${oxanium.variable} antialiased`}>{children}</body>
+      <Toaster theme="dark" />
     </html>
   );
 }
