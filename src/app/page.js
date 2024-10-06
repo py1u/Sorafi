@@ -1,4 +1,6 @@
-import Home from "./home/page";
-export default function Live() {
-  return <Home />;
-}
+import Root from "./home/page";
+const Live = () => {
+  return <Root />;
+};
+
+export default Live;
