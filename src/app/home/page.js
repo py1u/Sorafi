@@ -1,9 +1,14 @@
-import { sakuraGradient, sorafiDefaultDark } from "@/style/template";
-export default function Home() {
+import Home from "@/components/home/Root";
+import Header from "@/components/layout/Header";
+import Navigation from "@/components/Navigation";
+import { sorafiDefaultDark } from "@/style/template";
+const Root = () => {
   return (
     <div className={sorafiDefaultDark}>
-      <div className={`text-4xl ${sakuraGradient}`}>Welcome to Sorafi</div>
-      <p>Your Financial Universe, All in One Wallet</p>
+      <Header />
+      <Home />
     </div>
   );
-}
+};
+
+export default Root;
